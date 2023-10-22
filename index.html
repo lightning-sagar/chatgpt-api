@@ -1,0 +1,119 @@
+. <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Interaction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+        }
+        
+        #chat-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            width: 100%;
+        }
+        
+        #message {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        
+        #loading-spinner {
+            display: none;
+            border: 4px solid rgba(0, 0, 0, 0.3);
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        
+        #chat-container {
+            max-width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #e5ffc4;
+            border: 1px solid #ccc;
+            overflow: auto;
+            max-height: 300px;
+            margin-top: 10px;
+            margin-left: 80px;
+            margin-right: 80px;
+        }
+        
+        /* Add margin to create spacing between messages */
+        <!-- .message {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+         -->
+        /* Style for user messages */
+        .message.user {
+           
+            color: rgb(44, 41, 41);
+            border-radius: 5px;
+            text-align: left;
+        }
+        
+        /* Style for ChatGPT messages */
+        .message.chatgpt {
+            color: #333;
+            border-radius: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>ChatGPT Interaction</h1>
+    <form id="chat-form">
+        <input id="message" type="text" placeholder="Type a message..." />
+        <button type="submit">Send</button>
+    </form>
+    <div id="loading-spinner" style="display: none;">
+        <div>Loading</div>
+    </div>
+    
+    <div id="chat-container">
+        <!-- Chat conversation will be displayed here -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
